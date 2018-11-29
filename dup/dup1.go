@@ -3,11 +3,9 @@
 package main
 
 import (
-  "io/ioutil"
   "fmt"
   "os"
-  "strings"
-
+  "bufio"
 )
 
 func main() {
@@ -17,7 +15,7 @@ func main() {
   input := bufio.NewScanner(os.Stdin)
 
   for input.Scan() {
-    counts[input.text()]++
+    counts[input.Text()]++
   }
 
   for line, n := range counts {

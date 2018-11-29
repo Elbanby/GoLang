@@ -1,11 +1,9 @@
 package main
 
 import (
-  "io/ioutil"
   "fmt"
   "os"
-  "strings"
-
+  "bufio"
 )
 
 func main() {

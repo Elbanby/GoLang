@@ -1,11 +1,10 @@
 package main
 
 import (
-  "io/ioutil"
   "fmt"
+  "io/ioutil"
   "os"
   "strings"
-
 )
 
 func main() {
