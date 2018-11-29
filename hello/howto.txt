@@ -1,0 +1,17 @@
+So to setup you create a folder, then you create a src folder inside of it
+
+then the root folder you have to specify it in the path the way you do this is
+through the following:
+
+echo "export $GOPATH=<path>" >> ~/.bash_profile;
+
+then you create folders in the src folder and bamm you have your enviroment setup
+
+in order to run your Go app you use `go run app.go`
+
+
+If you want to create an executable, what you need to do is run
+
+go build app.go
+
+./app.go
