@@ -13,8 +13,8 @@ import (
 func main() {
   for _, url := range os.Args[1:] {
 
-    if !strings.HasPrefix(url,"https://") {
-      url = "https://" + url
+    if !strings.HasPrefix(url,"https://") && !strings.HasPrefix(url,"http://") {
+       url = "https://" + url
     }
 
     resp, err := http.Get(url)
