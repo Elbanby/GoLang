@@ -2,4 +2,4 @@
 
 ## Exercises from "The Go Programming Language 2nd edition"
 
-
+Each folder contain the source files.  
