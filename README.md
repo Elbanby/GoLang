@@ -4,14 +4,16 @@
 
 Each folder contain the source files.  
 
-* 3dsurfaceplot
-* ch1
-* dup
-* echo
-* fetcher
 * hello
-* lissajous
-* mandelbort
+* welcome
+* ch1
+* echo
 * packages
 * types
-* welcome
+* 3dsurfaceplot
+* dup
+* fetcher
+* lissajous
+* mandelbort
+
+
