@@ -15,5 +15,8 @@ Each folder contain the source files.
 * fetcher
 * lissajous
 * mandelbort
+* guessgame
+* conditionals 
+* passfail 
 
 
