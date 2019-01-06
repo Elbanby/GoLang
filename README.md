@@ -18,5 +18,6 @@ Each folder contain the source files.
 * guessgame
 * conditionals 
 * passfail 
+* filesize
 
 
