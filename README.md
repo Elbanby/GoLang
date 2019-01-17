@@ -19,5 +19,8 @@ Each folder contain the source files.
 * conditionals 
 * passfail 
 * filesize
-
+* io 
+* arrays 
+* packages 
+* wallCalculator 
 
