@@ -20,6 +20,7 @@ Each folder contain the source files.
 * passfail 
 * filesize
 * io 
+* ioString
 * arrays 
 * packages 
 * wallCalculator 
