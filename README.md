@@ -28,3 +28,4 @@ Each folder contain the source files.
 * maps
 *	slices
 * collectionRevison
+* structs
