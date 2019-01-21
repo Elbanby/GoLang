@@ -24,4 +24,7 @@ Each folder contain the source files.
 * arrays 
 * packages 
 * wallCalculator 
-
+* args
+* maps
+*	slices
+* collectionRevison
