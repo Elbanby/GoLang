@@ -29,3 +29,4 @@ Each folder contain the source files.
 *	slices
 * collectionRevison
 * structs
+* Custom types and methods
