@@ -31,3 +31,4 @@ Each folder contain the source files.
 * structs
 * Custom types and methods
 * Encapsulation
+* Interfaces
