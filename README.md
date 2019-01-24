@@ -30,3 +30,4 @@ Each folder contain the source files.
 * collectionRevison
 * structs
 * Custom types and methods
+* Encapsulation
