@@ -11,8 +11,8 @@ type subscriber struct {
 }
 
 func main() {
-	user1 := newSubscriber("sam",25) // Returns a POINTER
-	fmt.Printf("%#v\n", user1)
+  user1 := newSubscriber("sam",25) // Returns a POINTER
+  fmt.Printf("%#v\n", user1)
   user2 := newSubscriber("john",19)
   fmt.Printf("%#v\n", user2)
   // Make sure to pass the pointer to the struct
