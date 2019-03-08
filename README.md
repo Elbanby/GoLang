@@ -1,34 +1,43 @@
 # Learning GoLang
 
-## Go Programming Exercises
+## About
+
+This repo serves primarily as my quick notes to what I study in GoLang. It constantly keep growing the more I learn.
+
+## Exercises
 
 Each folder contain the source files.  
 
-* hello
-* welcome
-* ch1
-* echo
-* packages
-* types
 * 3dsurfaceplot
+* args
+* arrays
+* ch1
+* collectionRevision
+* conditionals
+* configuration
+* customTypes
+* defers
 * dup
+* echo
+* encapsulation
 * fetcher
+* filesize
+* flags
+* getrequest
+* goroutine
+* guessgame
+* hello
+* interfaces
+* io
+* ioString
 * lissajous
 * mandelbort
-* guessgame
-* conditionals 
-* passfail 
-* filesize
-* io 
-* ioString
-* arrays 
-* packages 
-* wallCalculator 
-* args
 * maps
-*	slices
-* collectionRevison
+* packages
+* print
+* slices
 * structs
-* Custom types and methods
-* Encapsulation
-* Interfaces
+* types
+* vardicFunc
+* wallcalculator
+* welcome
