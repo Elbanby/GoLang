@@ -39,8 +39,10 @@ func updateReadme(path string, files []os.FileInfo) {
 	lines := scan(path, "README.md")
 	beginIndex := indexOf(lines, "## Begin Directories")
 	endIndex := indexOf(lines, "## End Directories")
+	if beginIndex == -1 || endIndex == -1 {
+		log.Fatal("Can't find the section of the file to append to!")
+	}
 	var directories []string
-
 	for _, file := range files {
 		if []byte(file.Name())[0] != []byte(".")[0] && file.IsDir() {
 			directories = append(directories, " * "+file.Name())
@@ -49,21 +51,19 @@ func updateReadme(path string, files []os.FileInfo) {
 	fileData := append(lines[0:beginIndex+1], directories...)
 	fileData = append(fileData, lines[endIndex:]...)
 	var fileContent string
-
 	for _, line := range fileData {
 		fileContent += line
 		fileContent += "\n"
 	}
-
 	ioutil.WriteFile(path+"/README.md", []byte(fileContent), 0644)
 }
 
-func scan(path string, file string) []string {
-	readmeFile, err := os.Open(path + "/" + file)
+func scan(path string, filename string) []string {
+	file, err := os.Open(path + "/" + filename)
 	logError(err)
-	defer readmeFile.Close()
+	defer file.Close()
 	var lines []string
-	scanner := bufio.NewScanner(readmeFile)
+	scanner := bufio.NewScanner(file)
 	for scanner.Scan() {
 		lines = append(lines, scanner.Text())
 	}
