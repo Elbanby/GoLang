@@ -32,6 +32,8 @@ func readDir(path string) []os.FileInfo {
 }
 
 func updateReadme(path string, files []os.FileInfo) {
+	var beginSection int
+	var endSection int
 	readmeFile, err := os.Open(path + "/README.md")
 	var lines []string
 	defer readmeFile.Close()
@@ -46,20 +48,35 @@ func updateReadme(path string, files []os.FileInfo) {
 	if scanner.Err() != nil {
 		log.Fatal(err)
 	}
-	fileContnent := ""
-	for _, line := range lines {
-		if line == "## Directories" {
-			fileContnent = fmt.Sprintf("%s%s\n ", fileContnent, line)
-			for _, file := range files {
-				// ignore hidden folders.
-				if []byte(file.Name())[0] != []byte(".")[0] && file.IsDir() {
-					fileContnent += fmt.Sprintf("* %v\n ", file.Name())
-				}
-			}
+
+	for i, line := range lines {
+		if line == "## Begin Directories" {
+			beginSection = i
+		}
+		if line == "## End Directories" {
+			endSection = i
+		}
+	}
+
+	var fileTop = lines[0 : beginSection+1]
+	var fileBottom = lines[endSection:]
+	var filesSection []string
+
+	for _, file := range files {
+		if []byte(file.Name())[0] == []byte(".")[0] || !file.IsDir() {
 			continue
 		}
-		fileContnent += line
-		fileContnent += "\n"
+		filesSection = append(filesSection, "* "+file.Name())
 	}
-	ioutil.WriteFile(path+"/README.md", []byte(fileContnent), 0644)
+
+	completedata := append(fileTop, filesSection...)
+	completedata = append(completedata, fileBottom...)
+	fmt.Println(completedata)
+
+	var fileContent string
+	for _, line := range completedata {
+		fileContent += line
+		fileContent += "\n"
+	}
+	ioutil.WriteFile(path+"/README.md", []byte(fileContent), 0644)
 }
