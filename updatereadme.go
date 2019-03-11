@@ -9,8 +9,13 @@ import (
 	"sync"
 )
 
+var mux sync.Mutex
+
 func main() {
 	var wg sync.WaitGroup
+	if len(os.Args) <= 2 {
+		log.Fatal("not enough args")
+	}
 	for _, path := range os.Args[1:] {
 		wg.Add(1)
 		go func(path string) {
@@ -29,6 +34,8 @@ func readDir(path string) []os.FileInfo {
 }
 
 func updateReadme(path string, files []os.FileInfo) {
+	mux.Lock()
+	defer mux.Unlock()
 	lines := scan(path, "README.md")
 	beginIndex := indexOf(lines, "## Begin Directories")
 	endIndex := indexOf(lines, "## End Directories")
@@ -39,7 +46,6 @@ func updateReadme(path string, files []os.FileInfo) {
 			directories = append(directories, " * "+file.Name())
 		}
 	}
-
 	fileData := append(lines[0:beginIndex+1], directories...)
 	fileData = append(fileData, lines[endIndex:]...)
 	var fileContent string
