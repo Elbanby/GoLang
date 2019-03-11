@@ -37,7 +37,6 @@ This repo serves primarily as my quick notes to what I study in GoLang. It const
  * src
  * structs
  * types
- * updatereadme.go
  * vardicFunc
  * wallcalculator
  * welcome
