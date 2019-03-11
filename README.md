@@ -2,7 +2,7 @@
 
 ## About
 
-This repo serves primarily as my quick notes to what I study in GoLang. It constantly keep growing the more I learn.
+This repo serves primarily as my quick notes to what I learn about GoLang. Its constantly keep growing.
 
 ## Directories
  * 3dsurfaceplot
