@@ -13,9 +13,6 @@ var mux sync.Mutex
 
 func main() {
 	var wg sync.WaitGroup
-	if len(os.Args) <= 2 {
-		log.Fatal("not enough args")
-	}
 	for _, path := range os.Args[1:] {
 		wg.Add(1)
 		go func(path string) {

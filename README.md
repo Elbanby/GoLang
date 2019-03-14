@@ -17,6 +17,7 @@ This repo serves primarily as my quick notes to what I learn about GoLang. Its c
  * dup
  * echo
  * encapsulation
+ * errorsAndPanics
  * fetcher
  * filesize
  * flags
@@ -40,4 +41,4 @@ This repo serves primarily as my quick notes to what I learn about GoLang. Its c
  * vardicFunc
  * wallcalculator
  * welcome
-## End Directories
+ * welcome
