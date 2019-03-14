@@ -41,4 +41,4 @@ This repo serves primarily as my quick notes to what I learn about GoLang. Its c
  * vardicFunc
  * wallcalculator
  * welcome
- * welcome
+## End Directories
