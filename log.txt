@@ -1,0 +1,2 @@
+logger: 2019/04/30 00:26:09 logging.go:16: This is a regular log message
+logger: 2019/04/30 00:26:09 logging.go:17: This is a fatal error

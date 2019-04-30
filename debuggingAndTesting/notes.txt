@@ -1,0 +1,2 @@
+Log levels:
+Trace, Debug, Info, Warn, Error, and Critical, Notice, Alert, and Emergency
