@@ -13,6 +13,8 @@ This repo serves primarily as my quick notes to what I learn about GoLang. Its c
  * conditionals
  * configuration
  * customTypes
+ * debuggingAndTesting
+ * defer
  * defers
  * dup
  * echo
@@ -25,6 +27,7 @@ This repo serves primarily as my quick notes to what I learn about GoLang. Its c
  * goroutine
  * guessgame
  * hello
+ * host
  * interfaces
  * io
  * ioString
@@ -33,12 +36,14 @@ This repo serves primarily as my quick notes to what I learn about GoLang. Its c
  * maps
  * packages
  * print
+ * reflection
  * server
  * slices
  * src
  * structs
  * types
- * vardicFunc
  * wallcalculator
+ * webservices
  * welcome
+ * types
 ## End Directories
